@@ -1,4 +1,6 @@
-# ajoneuvot kunnannimillä
-ank <- merge(an, kunnat)
+# autot kunnannimillä
+autot_kunnat <- merge(autot, kunnat)
 
-autotiheys <- tapply(rep(1, length(ank$kuntanimi)), ank$kuntanimi, sum)
+autoja_kunnissa <- tapply(rep(1, length(autot_kunnat$kuntanimi)),
+                          autot_kunnat$kuntanimi,
+                          sum)
